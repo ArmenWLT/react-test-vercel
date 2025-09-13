@@ -140,7 +140,7 @@ function App() {
           ))
         ) : (
           <div style={{ padding: '12px', color: '#6b7280' }}>
-            No tasks found update 2.
+            No tasks found update 3.
           </div>
         )}
       </div>
