@@ -1,0 +1,105 @@
+/* === Global Font & Reset === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Light Theme Variables === */
+:root {
+  --bg-main: #f9fafb;
+  --text-main: #1f2937;
+  --bg-card: #ffffff;
+  --bg-hover: #f3f4f6;
+  --border-color: #e2e8f0;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-faint: #9ca3af;
+
+  --circle-pending-bg: #f9fafb;
+  --circle-pending-border: #e5e7eb;
+  --circle-pending-text: #9ca3af;
+
+  --circle-active-bg: #eff6ff;
+  --circle-active-border: #3b82f6;
+  --circle-active-text: #3b82f6;
+}
+
+/* === Dark Theme Overrides === */
+body.dark {
+  --bg-main: #111827;
+  --text-main: #f3f4f6;
+  --bg-card: #1e293b;
+  --bg-hover: #111827;
+  --border-color: #334155;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+
+  --circle-pending-bg: #1e293b;
+  --circle-pending-border: #475569;
+  --circle-pending-text: #64748b;
+
+  --circle-active-bg: #1e3a8a;
+  --circle-active-border: #60a5fa;
+  --circle-active-text: #ffffff;
+}
+
+/* === Apply Theme Colors === */
+body.light {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+body.dark {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* === General Button Styling === */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border: none;
+}
+
+/* === Add Task / Show Button === */
+.showButton {
+  padding: 12px 24px;
+  background-color: var(--text-primary);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.showButton:hover {
+  background-color: var(--text-secondary);
+}
+
+/* === Task Cards Grid === */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 24px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* === Responsive Handling === */
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .showButton {
+    width: 100%;
+  }
+}

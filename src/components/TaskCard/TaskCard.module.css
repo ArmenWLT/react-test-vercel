@@ -1,0 +1,161 @@
+/* === Card Container === */
+.stepper-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.stepper-box:hover {
+  background: var(--bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* === Row Layout === */
+.stepper-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* === Circle === */
+.stepper-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* === Circle Status Colors === */
+.stepper-completed .stepper-circle {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.stepper-active .stepper-circle {
+  background: var(--circle-active-bg);
+  border: 2px solid var(--circle-active-border);
+  color: var(--circle-active-text);
+}
+
+.stepper-pending .stepper-circle {
+  background: var(--circle-pending-bg);
+  border: 2px solid var(--circle-pending-border);
+  color: var(--circle-pending-text);
+}
+
+/* === Content === */
+.stepper-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* === Title === */
+.stepper-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+/* === Description === */
+.stepper-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  line-height: 1.5;
+  max-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: max-height 0.3s ease;
+}
+
+.stepper-description.expanded {
+  white-space: normal;
+  max-height: 500px;
+}
+
+/* === Time Fields === */
+.stepper-time-range {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.stepper-time {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-bottom: 4px;
+}
+
+/* === Status Badge === */
+.stepper-status {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.stepper-completed .stepper-status {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.stepper-active .stepper-status {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.stepper-pending .stepper-status {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+/* === Controls === */
+.stepper-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* === Buttons / Selects === */
+.stepper-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.stepper-button:hover {
+  background-color: var(--bg-hover);
+}
+
+.stepper-button:focus {
+  outline: none;
+  border-color: var(--circle-active-border);
+}
+
+select.stepper-button {
+  padding-right: 32px;
+}
