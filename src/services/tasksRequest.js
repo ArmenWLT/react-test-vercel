@@ -1,4 +1,4 @@
-const BASE_URL = "https://react-test-vercel-gamma.vercel.app/tasks";
+const BASE_URL = "/api/tasks";
 
 export async function fetchTasks() {
     try {
